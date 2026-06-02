@@ -1,8 +1,8 @@
-// Smooth active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id], div[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
-const observer = new IntersectionObserver((entries) => {
+const navObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navLinks.forEach(link => {
@@ -13,25 +13,25 @@ const observer = new IntersectionObserver((entries) => {
       });
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.4 });
 
-sections.forEach(section => observer.observe(section));
+sections.forEach(s => navObserver.observe(s));
 
-// Fade-in animation on scroll
-const fadeEls = document.querySelectorAll('.skill-card, .project-card, .fact-item');
+// Fade-in on scroll with stagger
+const fadeEls = document.querySelectorAll('.fade-in');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, parseInt(entry.target.dataset.delay) || 0);
+      fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 
-fadeEls.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+fadeEls.forEach((el, i) => {
+  el.dataset.delay = (i % 5) * 80;
   fadeObserver.observe(el);
 });
