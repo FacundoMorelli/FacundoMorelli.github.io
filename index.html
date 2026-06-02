@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facundo Morelli — Desarrollador Web</title>
+  <title>Facundo Morelli — Frontend Dev</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,10 +12,10 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <span class="nav-logo">FM</span>
+    <span class="nav-logo">FM_</span>
     <ul class="nav-links">
       <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#habilidades">Skills</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -24,36 +24,27 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <p class="hero-greeting">Hola, soy</p>
-      <h1 class="hero-name">Facundo Morelli</h1>
-      <h2 class="hero-role">Desarrollador Web Frontend</h2>
+      <div class="hero-tag">Disponible · Buenos Aires, AR</div>
+      <h1 class="hero-name">
+        Facundo<br>Morelli
+        <span>Desarrollador Web Frontend</span>
+      </h1>
       <p class="hero-desc">
         Técnico en Informática egresado de la EEST N°1 de Chascomús.
-        Me apasiona construir interfaces limpias y funcionales con HTML, CSS y JavaScript.
+        Construyo interfaces funcionales y bien pensadas con HTML, CSS y JavaScript.
       </p>
       <div class="hero-btns">
         <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
         <a href="#contacto" class="btn btn-outline">Contactarme</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="code-card">
-        <div class="code-dots">
-          <span></span><span></span><span></span>
-        </div>
-        <pre class="code-block"><span class="c-key">const</span> <span class="c-var">dev</span> = {
-  <span class="c-prop">nombre</span>: <span class="c-str">"Facundo Morelli"</span>,
-  <span class="c-prop">stack</span>: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>, <span class="c-str">"JS"</span>],
-  <span class="c-prop">disponible</span>: <span class="c-bool">true</span>,
-  <span class="c-prop">ubicacion</span>: <span class="c-str">"Buenos Aires, AR"</span>
-};</pre>
-      </div>
-    </div>
+    <div class="hero-number" aria-hidden="true">01</div>
   </section>
 
   <!-- SOBRE MÍ -->
   <section class="section" id="sobre-mi">
-    <h2 class="section-title">Sobre mí</h2>
+    <div class="section-label">Sobre mí</div>
+    <h2 class="section-title">Un poco de contexto</h2>
     <div class="about-grid">
       <div class="about-text">
         <p>
@@ -61,32 +52,33 @@
           en la Escuela de Educación Secundaria Técnica N°1 de Chascomús, Buenos Aires.
         </p>
         <p>
-          Durante mi formación técnica desarrollé una fuerte base en desarrollo web frontend.
-          Me interesa especialmente crear experiencias de usuario fluidas e interfaces bien diseñadas.
-          Aprendo rápido y disfruto resolver problemas con código.
+          Durante la carrera técnica construí una base sólida en desarrollo web frontend.
+          Me interesa especialmente el detalle visual y crear experiencias que se sientan
+          naturales para quien las usa. Aprendo rápido y disfruto el proceso de resolver
+          problemas con código.
         </p>
         <p>
-          Estoy disponible para trabajar de forma remota o híbrida y busco mi primera experiencia
-          profesional para seguir creciendo como desarrollador.
+          Busco mi primera experiencia profesional para seguir creciendo.
+          Disponible para trabajar remoto o híbrido.
         </p>
       </div>
       <div class="about-facts">
-        <div class="fact-item">
-          <span class="fact-icon">🎓</span>
+        <div class="fact-item fade-in">
+          <span class="fact-icon">EDU</span>
           <div>
             <strong>EEST N°1 — Chascomús</strong>
             <span>Técnico en Informática · 2019–2025</span>
           </div>
         </div>
-        <div class="fact-item">
-          <span class="fact-icon">📍</span>
+        <div class="fact-item fade-in">
+          <span class="fact-icon">LOC</span>
           <div>
             <strong>Buenos Aires, Argentina</strong>
-            <span>Disponible remoto / híbrido</span>
+            <span>Remoto / híbrido</span>
           </div>
         </div>
-        <div class="fact-item">
-          <span class="fact-icon">💼</span>
+        <div class="fact-item fade-in">
+          <span class="fact-icon">ROL</span>
           <div>
             <strong>Buscando oportunidades</strong>
             <span>Junior / Trainee Developer</span>
@@ -97,89 +89,79 @@
   </section>
 
   <!-- HABILIDADES -->
-  <section class="section section-dark" id="habilidades">
-    <h2 class="section-title">Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">🌐</div>
-        <h3>HTML5</h3>
-        <p>Estructura semántica, accesibilidad, SEO básico</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🎨</div>
-        <h3>CSS3</h3>
-        <p>Flexbox, Grid, animaciones, diseño responsive</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚡</div>
-        <h3>JavaScript</h3>
-        <p>ES6+, DOM manipulation, fetch API, lógica de UI</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🔧</div>
-        <h3>Git</h3>
-        <p>Control de versiones, GitHub, flujos de trabajo básicos</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📱</div>
-        <h3>Diseño Responsive</h3>
-        <p>Mobile-first, media queries, layouts adaptables</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🤖</div>
-        <h3>Herramientas IA</h3>
-        <p>Integración de IA para acelerar el desarrollo</p>
+  <div class="section-dark" id="habilidades">
+    <div class="section-inner">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">Lo que manejo</h2>
+      <div class="skills-list">
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>HTML5</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>CSS3</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>JavaScript ES6+</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>Git &amp; GitHub</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>Flexbox &amp; Grid</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>Diseño Responsive</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>DOM Manipulation</div>
+        <div class="skill-tag fade-in"><span class="skill-dot"></span>Herramientas IA</div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- PROYECTOS -->
   <section class="section" id="proyectos">
-    <h2 class="section-title">Proyectos</h2>
+    <div class="section-label">Proyectos</div>
+    <h2 class="section-title">Lo que construí</h2>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-header project-header-1">
-          <span class="project-tag">HTML · CSS · JS</span>
+      <div class="project-card fade-in">
+        <div class="project-num">01 /</div>
+        <div class="project-tags">
+          <span class="project-tag-badge">HTML</span>
+          <span class="project-tag-badge">CSS</span>
+          <span class="project-tag-badge">JS</span>
         </div>
-        <div class="project-body">
-          <h3>Portfolio Personal</h3>
-          <p>Este mismo sitio. Diseñado y desarrollado desde cero con HTML, CSS y JavaScript puro. Responsive y optimizado.</p>
-          <div class="project-links">
-            <a href="https://github.com/FacundoMorelli/FacundoMorelli.github.io" class="project-link">Ver código →</a>
-          </div>
-        </div>
+        <h3>Portfolio Personal</h3>
+        <p>Este mismo sitio. Desarrollado desde cero sin frameworks, con diseño propio, animaciones y diseño responsive.</p>
+        <a href="https://github.com/FacundoMorelli/FacundoMorelli.github.io" target="_blank" class="project-link">Ver código →</a>
       </div>
-      <div class="project-card project-coming">
-        <div class="project-header project-header-2">
-          <span class="project-tag">Próximamente</span>
+      <div class="project-card coming fade-in">
+        <div class="project-num">02 /</div>
+        <div class="project-tags">
+          <span class="project-tag-badge">Próximamente</span>
         </div>
-        <div class="project-body">
-          <h3>Más proyectos en camino</h3>
-          <p>Actualmente trabajando en nuevos proyectos. ¡Pronto disponibles en GitHub!</p>
-        </div>
+        <h3>Más proyectos en camino</h3>
+        <p>Trabajando en nuevos proyectos. Pronto disponibles en GitHub.</p>
       </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section class="section section-dark" id="contacto">
-    <h2 class="section-title">Contacto</h2>
-    <p class="contact-subtitle">¿Tenés una oportunidad o querés charlar? Escribime.</p>
-    <div class="contact-links">
-      <a href="mailto:facumorelli18@gmail.com" class="contact-item">
-        <span>📧</span> facumorelli18@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/facundomorelli" target="_blank" class="contact-item">
-        <span>💼</span> linkedin.com/in/facundomorelli
-      </a>
-      <a href="https://github.com/FacundoMorelli" target="_blank" class="contact-item" id="github-link">
-        <span>🐙</span> github.com/FacundoMorelli
-      </a>
+  <div class="section-dark" id="contacto">
+    <div class="section-inner">
+      <div class="section-label">Contacto</div>
+      <h2 class="section-title">Hablemos</h2>
+      <p class="contact-intro">
+        ¿Tenés una oportunidad o querés charlar sobre un proyecto?
+        <strong> Estoy disponible.</strong>
+      </p>
+      <div class="contact-links">
+        <a href="mailto:facumorelli18@gmail.com" class="contact-item">
+          <span class="contact-label">Mail</span>
+          facumorelli18@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/facundomorelli" target="_blank" class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          facundomorelli
+        </a>
+        <a href="https://github.com/FacundoMorelli" target="_blank" class="contact-item">
+          <span class="contact-label">GitHub</span>
+          FacundoMorelli
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
 
   <footer class="footer">
-    <p>Hecho con ❤️ por Facundo Morelli · 2025</p>
+    <span>Facundo Morelli · 2025</span>
+    <span>Hecho con código propio</span>
   </footer>
 
   <script src="script.js"></script>
